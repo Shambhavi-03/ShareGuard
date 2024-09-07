@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="icon" type="image/png" href=""> -->
+  <link rel="stylesheet" href="style.css">
+  <title>Online-Sharing</title>
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="card">
+    <h1>Online-Sharing</h1>
+
+    <h2>Upload File</h2>
+    <input type="file" id="file" onchange="checkFileSize()" /><br>
+    
+    <center>
+      <button id="upload" onclick="uploadImage()">Upload</button>
+    </center>
+
+    <center>
+      <div id="ShowUniqueID" hidden>
+        <p>Unique ID</p>
+        <input type="text" id="showunique" value="" disabled>
+      </div>
+    </center>
+
+    <div class="Download" id="downloadiv">
+      <h2>Receive File</h2>
+      <input type="text" id="unique" placeholder="Enter Unique ID"><br>
+      <center>
+        <button id="show" onclick="showimage()">Download</button>
+      </center>
+    </div>
+  </div>
+
+  <center>
+    <div class="Drop-here" hidden>
+      <h1 class="Drop-text">Drop Here</h1>
+    </div>
+  </center>
+  
+</body>
